@@ -4,6 +4,7 @@ namespace MagniseTask.Interfaces;
 
 public interface IFintachartsAuthService
 {
-	Task<AuthData> AuthenticateAsync();
+	Task EnsureAuthenticatedAsync();
+	Task AuthenticateAsync();
 	
 }
