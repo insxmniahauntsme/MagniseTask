@@ -16,7 +16,9 @@ public class AssetsRepository : IAssetsRepository
 	
 	public async Task<IEnumerable<Asset>> GetSupportedAssets()
 	{
-		return await _context.Assets.ToListAsync();
+		return await _context.Assets
+			.Include(a => a.Mappings)
+			.ToListAsync();
 	}
 
 	public async Task<Asset> GetAsset(string symbol)
