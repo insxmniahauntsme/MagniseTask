@@ -1,0 +1,6 @@
+﻿services:
+  magnisetask:
+    image: magnisetask
+    build:
+      context: .
+      dockerfile: MagniseTask/Dockerfile
